@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}{{ law.name }}{% endblock %} {% block
+content %}
+<a href="/">&larr; Back to all laws</a>
+
+<h2>Law {{ law.number }}: {{ law.name }}</h2>
+<p><em>{{ law.summary }}</em></p>
+
+<h3>What it says</h3>
+<p>{{ law.what_it_says }}</p>
+
+<h3>Why it exists</h3>
+<p>{{ law.why_it_exists }}</p>
+
+<h3>In practice</h3>
+<p>{{ law.in_practice }}</p>
+
+<h3>Common confusions</h3>
+<p>{{ law.common_confusions }}</p>
+{% endblock %}

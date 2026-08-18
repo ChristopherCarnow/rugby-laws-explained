@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "what-is-the-50-22",
+    "question": "What is the 50:22?",
+    "answer": "If a team kicks the ball from inside their own half and it bounces into touch inside the opposition's 22, the kicking team throws in at the resulting lineout instead of the team that was defending. It rewards accurate, tactical kicking from deep, and forces defenders to keep a player back to cover the space, which opens things up elsewhere on the field.",
+    "related_law_numbers": [18]
+  },
+  {
+    "slug": "why-did-the-tmo-check-that",
+    "question": "Why did the TMO check that?",
+    "answer": "The TMO only reviews specific categories of decision, mainly tries, foul play, and certain safety-related incidents, not every passage of play. If the referee or an assistant flags something in one of those categories, play stops while the TMO reviews available footage and advises the referee, who then makes the final call.",
+    "related_law_numbers": [6]
+  },
+  {
+    "slug": "penalty-try-explained",
+    "question": "What is a penalty try?",
+    "answer": "A penalty try is awarded when foul play by the defending team clearly stops a probable try from being scored. It's worth the same 5 points as a normal try, without the ball needing to be physically grounded, since the offending team's actions are what prevented that from happening.",
+    "related_law_numbers": [8, 9]
+  },
+  {
+    "slug": "yellow-card-vs-red-card",
+    "question": "What's the difference between a yellow card and a red card?",
+    "answer": "A yellow card sends a player to the sin bin for a set period, usually 10 minutes, after which they can return. A red card removes a player from the match entirely, with no return, for a more serious offence. Both can be issued directly or upgraded after review during the match.",
+    "related_law_numbers": [9]
+  },
+  {
+    "slug": "why-is-offside-different-at-a-ruck",
+    "question": "Why is offside different at a ruck than in open play?",
+    "answer": "In open play, offside is judged relative to the ball carrier. At a ruck, an offside line is instead drawn behind the hindmost foot of the players involved, running the width of the field, since there's no single ball carrier to measure from once the ball's on the ground and being contested.",
+    "related_law_numbers": [10, 15]
+  },
+  {
+    "slug": "what-is-a-hia",
+    "question": "What is a HIA?",
+    "answer": "A Head Injury Assessment is a set process a player goes through after a head knock, either on the field or in a short off-field window, to check for concussion symptoms before they're allowed to return to play. It's a player welfare measure, separate from the laws around foul play itself, though the two often come up in the same incident.",
+    "related_law_numbers": [9]
+  }
+]

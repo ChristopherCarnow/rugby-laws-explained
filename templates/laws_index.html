@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}All Laws{% endblock %} {% block
+content %}
+<h2>The 21 Laws of Rugby</h2>
+<ul>
+  {% for law in laws %}
+  <li>
+    <a href="/laws/{{ law.slug }}">Law {{ law.number }}: {{ law.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
