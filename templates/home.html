@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Rugby Laws Explained — Plain-English
+Guide{% endblock %} {% block description %}Rugby's laws explained clearly, for
+South African fans who want to actually understand the game, not just watch
+it.{% endblock %} {% block content %}
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img
+      src="{{ url_for('static', filename='images/pitch-lines.svg') }}"
+      alt=""
+    />
+  </div>
+  <div class="hero-text">
+    <h2>Understand the game, not just watch it.</h2>
+    <p>
+      Rugby's 21 laws, explained in plain English — no jargon, no assumptions
+      about what you already know.
+    </p>
+    <div class="hero-links">
+      <a class="button" href="/laws">Browse all laws</a>
+      <a class="button button-secondary" href="/explainers"
+        >Confusing calls, explained</a
+      >
+    </div>
+  </div>
+</section>
+
+<div class="category-group">
+  <div class="category-label">Start here</div>
+  <ul class="law-list">
+    <li class="law-row">
+      <span class="law-badge">10</span>
+      <a href="/laws/offside-and-onside-in-open-play"
+        >Offside and Onside in Open Play</a
+      >
+    </li>
+    <li class="law-row">
+      <span class="law-badge">19</span>
+      <a href="/laws/scrum">Scrum</a>
+    </li>
+    <li class="law-row">
+      <span class="law-badge">15</span>
+      <a href="/laws/ruck">Ruck</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

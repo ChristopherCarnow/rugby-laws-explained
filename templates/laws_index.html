@@ -1,11 +1,22 @@
-{% extends "base.html" %} {% block title %}All Laws{% endblock %} {% block
-content %}
-<h2>The 21 Laws of Rugby</h2>
-<ul>
-  {% for law in laws %}
-  <li>
-    <a href="/laws/{{ law.slug }}">Law {{ law.number }}: {{ law.name }}</a>
-  </li>
-  {% endfor %}
-</ul>
+{% extends "base.html" %}
+
+{% block title %}All Laws{% endblock %}
+
+{% block content %}
+    <h2>The 21 Laws of Rugby</h2>
+
+    {% set categories = laws | map(attribute='category') | unique | list %}
+    {% for category in categories %}
+        <div class="category-group">
+            <div class="category-label">{{ category }}</div>
+            <ul class="law-list">
+                {% for law in laws if law.category == category %}
+                    <li class="law-row">
+                        <span class="law-badge">{{ "%02d"|format(law.number) }}</span>
+                        <a href="/laws/{{ law.slug }}">{{ law.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
 {% endblock %}

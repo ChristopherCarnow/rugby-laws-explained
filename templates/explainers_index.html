@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Confusing Calls Explained{% endblock %}
+
+{% block content %}
+    <h2>Confusing Calls Explained</h2>
+    <ul class="explainer-list">
+        {% for explainer in explainers %}
+            <li><a href="/explainers/{{ explainer.slug }}">{{ explainer.question }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

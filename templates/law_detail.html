@@ -1,9 +1,13 @@
 {% extends "base.html" %} {% block title %}{{ law.name }}{% endblock %} {% block
-content %}
-<a href="/">&larr; Back to all laws</a>
+description %}{{ law.summary }}{% endblock %} {% block content %}
+<a class="back-link" href="/laws">&larr; Back to all laws</a>
 
-<h2>Law {{ law.number }}: {{ law.name }}</h2>
-<p><em>{{ law.summary }}</em></p>
+<div class="law-header">
+  <span class="law-badge">{{ "%02d"|format(law.number) }}</span>
+  <h2>{{ law.name }}</h2>
+</div>
+
+<p class="law-summary">{{ law.summary }}</p>
 
 <h3>What it says</h3>
 <p>{{ law.what_it_says }}</p>
@@ -16,4 +20,8 @@ content %}
 
 <h3>Common confusions</h3>
 <p>{{ law.common_confusions }}</p>
+
+<p class="last-reviewed">
+  Last checked against the official law book: {{ law.last_reviewed }}
+</p>
 {% endblock %}

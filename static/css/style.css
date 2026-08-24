@@ -1,0 +1,404 @@
+/* ===========================
+   Rugby Laws Explained — Stylesheet
+   Concept: "rulebook, not fan site"
+   =========================== */
+
+:root {
+  --paper: #f7f8f5;
+  --ink: #1c2321;
+  --pitch: #2f5233;
+  --pitch-dark: #22402a;
+  --card: #efede6;
+  --gold: #b8912f;
+  --hairline: #dad9d2;
+  --max-width: 780px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--pitch-dark);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--pitch);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+  transition: border-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  border-bottom-color: var(--pitch);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* ---------- Layout shell ---------- */
+
+header {
+  border-bottom: 1px solid var(--hairline);
+  background: var(--paper);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header h1 a {
+  border-bottom: none;
+  color: var(--pitch-dark);
+}
+
+nav {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  border-bottom: none;
+  color: var(--ink);
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--pitch);
+  border-bottom: 2px solid var(--gold);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+footer {
+  border-top: 1px solid var(--hairline);
+  margin-top: 3rem;
+}
+
+footer p {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7169;
+}
+
+/* ---------- Laws index (grouped, numbered) ---------- */
+
+.category-group {
+  margin-bottom: 2.5rem;
+}
+
+.category-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.law-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.law-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.law-row:last-child {
+  border-bottom: none;
+}
+
+.law-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--pitch);
+  border: 1px solid var(--hairline);
+  background: var(--card);
+  border-radius: 3px;
+  padding: 0.15rem 0.45rem;
+  min-width: 1.6rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.law-row a {
+  border-bottom: none;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.law-row a:hover {
+  color: var(--pitch);
+}
+
+/* ---------- Law detail page ---------- */
+
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none;
+  color: #6b7169;
+}
+
+.back-link:hover {
+  color: var(--pitch);
+}
+
+.law-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.law-header .law-badge {
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.law-summary {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  color: var(--pitch);
+  font-size: 1.1rem;
+  border-left: 3px solid var(--gold);
+  padding-left: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* ---------- Glossary ---------- */
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--pitch-dark);
+  margin-top: 1.25rem;
+}
+
+dd {
+  margin-left: 0;
+  color: var(--ink);
+}
+
+/* ---------- Explainers ---------- */
+
+.explainer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.explainer-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.explainer-list a {
+  border-bottom: none;
+  font-size: 1.05rem;
+}
+
+/* ---------- Hero (home page) ---------- */
+
+.hero {
+  position: relative;
+  padding: 2.5rem 1.5rem 3rem;
+  margin: -1rem -1.5rem 2.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.hero-bg img {
+  width: 130%;
+  max-width: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.hero-text h2 {
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #3e4a40;
+  margin-bottom: 1.5rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid var(--pitch);
+  background: var(--pitch);
+  color: var(--paper) !important;
+  padding: 0.6rem 1.1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--pitch) !important;
+}
+
+.button:hover {
+  background: var(--pitch-dark);
+  border-color: var(--pitch-dark) !important;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--pitch) !important;
+}
+
+.button-secondary:hover {
+  background: var(--card);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  main {
+    padding: 1.75rem 1.25rem 3rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+.last-reviewed {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #6b7169;
+}
+
+/* ---------- Back to top arrow ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--pitch);
+  color: var(--paper) !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:hover {
+  background: var(--pitch-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
