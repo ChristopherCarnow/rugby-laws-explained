@@ -32,6 +32,20 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
+
+        <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+    <!-- Social share preview (WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="{% block og_title %}Rugby Laws Explained{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Rugby's laws explained in plain English, for South African fans.{% endblock %}">
+    <meta property="og:image" content="https://rugbylaws.co.za{{ url_for('static', filename='images/social-share.png') }}">
+    <meta property="og:url" content="https://rugbylaws.co.za{{ request.path }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
   </head>
   <a href="#top" class="back-to-top" aria-label="Back to top">&uarr;</a>
   <body>
