@@ -69,5 +69,10 @@ def sitemap():
 
     return Response("\n".join(xml), mimetype="application/xml")
 
+# tells search engine crawlers (Googlebot, Bingbot, etc.) which parts of your site they're allowed to crawl and index, and optionally points them to your sitemap.
+@app.route("/robots.txt")
+def robots():
+    return app.send_static_file("robots.txt")
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
