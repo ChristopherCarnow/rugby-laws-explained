@@ -20,7 +20,7 @@
     <title>{% block title %}Rugby Laws Explained{% endblock %}</title>
     <meta
       name="description"  
-      content="{% block description %}Plain-English explanations of every law in rugby, written for South African fans.{% endblock %}"
+      content="{% block description %}Plain-English explanations of every law in rugby.{% endblock %}"
     />
     <link rel="canonical" href="https://rugbylaws.co.za{{ request.path }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,7 +41,7 @@
 
     <!-- Social share preview (WhatsApp, Facebook, etc.) -->
     <meta property="og:title" content="{% block og_title %}Rugby Laws Explained{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}Rugby's laws explained in plain English, for South African fans.{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Rugby's laws explained in plain English.{% endblock %}">
     <meta property="og:image" content="https://rugbylaws.co.za{{ url_for('static', filename='images/social-share.png') }}">
     <meta property="og:url" content="https://rugbylaws.co.za{{ request.path }}">
     <meta property="og:type" content="website">
