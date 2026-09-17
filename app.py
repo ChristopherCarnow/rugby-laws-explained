@@ -57,7 +57,7 @@ def inject_year():
 # Creates the sitemap.xml file for search engines - keeps it fresh
 @app.route("/sitemap.xml")
 def sitemap():
-    pages = ["", "/laws", "/glossary", "/explainers"]
+    pages = ["", "/laws", "/glossary", "/explainers", "/privacy"]
     pages += [f"/laws/{law['slug']}" for law in laws]
     pages += [f"/explainers/{e['slug']}" for e in explainers]
 
